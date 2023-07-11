@@ -1,0 +1,123 @@
+
+.a{
+  font-size: small;
+}
+
+.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    border-radius: 50%;
+    height: 75%;
+  }
+}
+
+.App-header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.App-body {
+  margin-top: 0px;
+  background-color: #282c34;
+  background-image:url("./images/tech.jpg");
+  background-position: center;
+  background-size:cover;
+  font-size: calc(10px + 2vmin);
+  height: 1000px !important;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.row {
+  display: flex;
+}
+
+.carousel {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itm {
+  height: 300px;
+  object-fit:contain;
+}
+.column {
+  flex: 50%;
+  height: 200px;
+}
+
+.jumbotron{
+  background-image: url("./images/code.jpg");
+background-size: cover;
+  background-position: center;
+margin:0;
+padding:0;
+  width: 100% !important;
+  height: 350px;
+}
+
+.navbar{
+  width:100% !important;
+  margin:0px auto;
+  left:0;
+  right:0;
+  padding:0px !important;
+  font-size: 80%;
+  margin: 0px !important;
+  height: 80px;
+}
+
+.navbar-brand{
+  font-size:larger;
+  margin-left: 10px;
+}
+
+.nav-item{
+  font-size:medium;
+}
+
+.pic{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.profile-pic{
+  margin-top:5%;
+}
+
+.project-title{
+  margin-top: 10%;
+  color:white;
+}
+
+.subtitle{
+  margin-top: 10%;
+  color:white;
+}
+
+.title{
+  padding-top: 100px;
+  color: white;
+}
+
+
