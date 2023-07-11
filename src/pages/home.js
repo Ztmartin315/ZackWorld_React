@@ -7,24 +7,19 @@ function Home() {
 
   const projects = [
     {
-      title: 'Flutter Portfolio App',
-      description: '•Using Flutter, developed a mobile application which contained a portfolio including a resume page, an about page, a gallery, as well as a guest list.',
-      image: require('../images/Zack.jpg'),
+      title: 'Mobile Portfolio Application',
+      description: '•Using Flutter, developed a mobile application which contained a portfolio including a resume page, an about page, a gallery, as well as a guest list.', title: 'Flutter Portfolio App',
+      image: require('../images/flutter.png'),
     },
     {
-      title: 'Chruch ManagementApplication',
-      description: 'This is the description of Project 2.',
-      image: require('../images/eat.jpg'),
-    },
-    {
-      title: 'Location Tracker Application',
-      description: '•Using Flutter, developed an app that measured distance from current location to other locations, and permitted the user to add other locations into the database. Integrated with the server using a REST API.',
-      image: require('../images/eat.jpg'),
+      title: 'Chruch Management Application',
+      description: '•Using Vue.js including Pinia and Axios, and HTML/CSS with Bulma, developed a browser-based application to manage member data, including donations and event participation.  Provided detailed and summary views of each member.',
+      image: require('../images/364.png'),
     },
     {
       title: 'Media Management Application',
-      description: '•Using Vue.js including Pinia and Axios, developed a browser-based application to manage member data, including donations and event participation.  Provided detailed and summary views of each member.',
-      image: require('../images/pittsburgh.jpg'),
+      description: '•Using Python/Django, HTML/CSS with Bootstrap, MariaDB, and AWS (EC2, RDS, S3), developed a content management application that allowed users to upload media. The media was organized into playlists for media players to use to update their content. Implemented security measures for accessing website by requiring the creation of an account and log in information for individual users.',
+      image: require('../images/django.png'),
     },
   ];
 
@@ -60,6 +55,7 @@ function Home() {
             </div>
           </div>
         </div>
+
         <div class="project-title">
           <h1>My Projects</h1>
         </div>
@@ -69,13 +65,17 @@ function Home() {
             {projects.map((project, index) => (
               <Carousel.Item key={index}>
                 <img className="itm" src={project.image} alt={project.title} />
-                <Carousel.Caption>
+                <Carousel.Caption class="cap">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                 </Carousel.Caption>
               </Carousel.Item>
             ))}
           </Carousel>
+        </div>
+
+        <div class='rick-btn'>
+          <a class="btn btn-primary btn-lg" href="https://youtu.be/dQw4w9WgXcQ" role="button">The Promised Land</a>
         </div>
 
       </body>

@@ -38,18 +38,26 @@
   background-position: center;
   background-size: cover;
   font-size: calc(10px + 2vmin);
-  height: 1010px !important;
+  height: 1500px !important;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+
+
 .row {
   display: flex;
 }
 
+.cap {
+  margin-top: 10px;
+  color: white;
+}
+
 .carousel {
+  margin-top: 50px;
   height: 600px;
   display: flex;
   justify-content: center;
@@ -57,7 +65,9 @@
 }
 
 .itm {
-  height: 300px;
+
+  height: 400px;
+  width: 600px;
   object-fit: contain;
 }
 
@@ -107,8 +117,12 @@
 }
 
 .project-title {
-  margin-top: 10%;
+  margin-top: 75px;
   color: white;
+}
+
+.rick-btn {
+  margin-top: 100px;
 }
 
 .subtitle {
