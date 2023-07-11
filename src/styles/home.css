@@ -1,5 +1,4 @@
-
-.a{
+.a {
   font-size: small;
 }
 
@@ -35,16 +34,17 @@
 .App-body {
   margin-top: 0px;
   background-color: #282c34;
-  background-image:url("../images/tech.jpg");
+  background-image: url("../images/tech.jpg");
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   font-size: calc(10px + 2vmin);
-  height: 1000px !important;
+  height: 1010px !important;
 }
 
 .App-link {
   color: #61dafb;
 }
+
 .row {
   display: flex;
 }
@@ -58,66 +58,65 @@
 
 .itm {
   height: 300px;
-  object-fit:contain;
+  object-fit: contain;
 }
+
 .column {
   flex: 50%;
   height: 200px;
 }
 
-.jumbotron{
+.jumbotron {
   background-image: url("../images/code.jpg");
-background-size: cover;
+  background-size: cover;
   background-position: center;
-margin:0;
-padding:0;
+  margin: 0;
+  padding: 0;
   width: 100% !important;
   height: 350px;
 }
 
-.navbar{
-  width:100% !important;
-  margin:0px auto;
-  left:0;
-  right:0;
-  padding:0px !important;
+.navbar {
+  width: 100% !important;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  padding: 0px !important;
   font-size: 80%;
   margin: 0px !important;
   height: 80px;
 }
 
-.navbar-brand{
-  font-size:larger;
+.navbar-brand {
+  font-size: larger;
   margin-left: 10px;
 }
 
-.nav-item{
-  font-size:medium;
+.nav-item {
+  font-size: medium;
 }
 
-.pic{
+.pic {
   height: 200px;
   width: 200px;
   border-radius: 50%;
 }
 
-.profile-pic{
-  margin-top:5%;
+.profile-pic {
+  margin-top: 5%;
 }
 
-.project-title{
+.project-title {
   margin-top: 10%;
-  color:white;
-}
-
-.subtitle{
-  margin-top: 10%;
-  color:white;
-}
-
-.title{
-  padding-top: 100px;
   color: white;
 }
 
+.subtitle {
+  margin-top: 10%;
+  color: white;
+}
 
+.title {
+  padding-top: 100px;
+  color: white;
+}

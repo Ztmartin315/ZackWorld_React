@@ -1,0 +1,35 @@
+.navbar {
+    background-color: rgb(61, 54, 54);
+    height: 75px;
+}
+
+li {
+    display: inline !important;
+    margin: 5px;
+}
+
+.logopic {
+    border-radius: 50%;
+    height: 10%;
+    width: 10%;
+}
+
+.a1 {
+    color: #FFF;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.a1:hover {
+    color: darkgoldenrod;
+}
+
+.a2 {
+    color: #FFF;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.a2:hover {
+    color: darkgoldenrod;
+}
