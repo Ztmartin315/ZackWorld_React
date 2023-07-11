@@ -1,28 +1,10 @@
 
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 
-function App() {
+function Apps() {
 
-  const projects = [
-    {
-      title: 'Flutter Portfolio App',
-      description: 'This is the description of Project 1.',
-      image: require('./images/Zack.jpg'),
-    },
-    {
-      title: 'Mock Church Application',
-      description: 'This is the description of Project 2.',
-      image: require('./images/eat.jpg'),
-    },
-    {
-      title: 'Media Management Application',
-      description: 'This is the description of Project 3.',
-      image: require('./images/pittsburgh.jpg'),
-    },
-  ];
-
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -57,44 +39,10 @@ function App() {
 
       </header>
 
-      <body className="App-body">
-
-
-      <div class="row">
-            <div class="column">
-              <div class = "subtitle">
-                  <h1>Hi, I'm Zack!</h1>
-                  <h2>Take a look around!</h2>
-              </div>
-            </div>
-
-            <div class="column">
-              <div class = "profile-pic">
-                <img class = "pic" src={require("./images/Zack.jpg")} alt = "zack"/>
-              </div>
-            </div>
-         </div>
-          <div class="project-title">
-            <h1>My Projects</h1>
-          </div>
-
-        <div classname = "carousel">
-          <Carousel>
-      {projects.map((project, index) => (
-        <Carousel.Item  key={index}>
-          <img className="itm" src={project.image} alt={project.title} />
-          <Carousel.Caption>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      ))}
-    </Carousel>
-    </div>
-
+<body>
       </body>
     </div>
   );
 }
 
-export default App;
+export default Apps;

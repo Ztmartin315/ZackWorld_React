@@ -35,7 +35,7 @@
 .App-body {
   margin-top: 0px;
   background-color: #282c34;
-  background-image:url("./images/tech.jpg");
+  background-image:url("../images/tech.jpg");
   background-position: center;
   background-size:cover;
   font-size: calc(10px + 2vmin);
@@ -66,7 +66,7 @@
 }
 
 .jumbotron{
-  background-image: url("./images/code.jpg");
+  background-image: url("../images/code.jpg");
 background-size: cover;
   background-position: center;
 margin:0;
