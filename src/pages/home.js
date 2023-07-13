@@ -79,7 +79,12 @@ function Home() {
         </div>
 
       </body>
+      <footer>
+        <p>Created by Zack Martin</p>
+      </footer>
+
     </div>
+
   );
 }
 

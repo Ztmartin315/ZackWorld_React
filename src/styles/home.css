@@ -4,6 +4,7 @@
 
 .App {
   text-align: center;
+  height: 950px;
 
 }
 
@@ -38,7 +39,7 @@
   background-position: center;
   background-size: cover;
   font-size: calc(10px + 2vmin);
-  height: 1500px !important;
+  height: 1200px !important;
 }
 
 .App-link {
@@ -62,6 +63,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  color: white;
+  background-color: rgb(42, 42, 42);
+
+  height: 50px;
+  padding-top: 15px;
 }
 
 .itm {

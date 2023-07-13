@@ -1,3 +1,58 @@
 .App-header {
     color: black;
+    background-color: rgb(249, 212, 7);
+}
+
+.App {
+    background-color: rgb(249, 212, 7);
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    margin-right: 0 !important;
+
+    background-color: rgb(249, 212, 7);
+
+}
+
+.self {
+    border-radius: 50%;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.col {
+    height: 1000px;
+}
+
+
+
+#column1 {
+    background-color: rgb(42, 42, 42);
+    margin-left: 0 !important;
+    flex: 1;
+
+}
+
+#column2 {
+    background-color: rgb(249, 212, 7);
+    width: 80% !important;
+    margin: 0% !important;
+    flex: 2;
+
+}
+
+
+footer {
+    color: white;
+    background-color: rgb(42, 42, 42);
+
+    height: 50px;
+    padding-top: 15px;
 }
