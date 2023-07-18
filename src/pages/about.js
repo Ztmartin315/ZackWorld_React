@@ -19,7 +19,7 @@ function About() {
         <div className="About">
             <header className="About-header">
             </header>
-            <body>
+            <body className="bodily">
 
                 <center><h2> Woah</h2></center>
 
@@ -28,11 +28,11 @@ function About() {
 
             <footer className="footer">
 
-                <Button variant="primary" onClick={handleShow}>
+                <Button variant="dark" onClick={handleShow}>
                     Created By Zack Martin
                 </Button>
 
-                <Modal
+                <Modal className="modal"
                     show={show}
                     onHide={handleClose}
                     backdrop="static"

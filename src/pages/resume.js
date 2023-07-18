@@ -21,7 +21,7 @@ function Resume() {
       <header className="App-header">
       </header>
 
-      <body>
+      <body class="body1">
         <div class="container">
           <div class="row">
             <div class="col" id="column1">
@@ -142,7 +142,7 @@ function Resume() {
       </body >
 
       <footer className="footer">
-        <Button variant="warning" onClick={handleShow}>
+        <Button variant="dark" onClick={handleShow}>
           Created By Zack Martin
         </Button>
 

@@ -69,7 +69,7 @@ function Home() {
 
         <div className="column">
           <div className="rick-btn">
-            <a className="btn btn-primary btn-lg" href="https://youtu.be/dQw4w9WgXcQ" role="button">A Gift For You!</a>
+            <a className="btn btn-success btn-lg" href="https://youtu.be/dQw4w9WgXcQ" role="button">A Gift For You!</a>
           </div>
         </div>
 
@@ -96,7 +96,7 @@ function Home() {
       </body>
       <footer className="footer">
 
-        <Button variant="primary" onClick={handleShow}>
+        <Button variant="dark" onClick={handleShow}>
           Created By Zack Martin
         </Button>
 
