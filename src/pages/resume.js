@@ -2,9 +2,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/resume.css';
 import Accordion from 'react-bootstrap/Accordion';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
+
 
 function Resume() {
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
   return (
@@ -73,23 +82,24 @@ function Resume() {
 
               <div class="accordion-container">
                 <Accordion className="accordion" defaultActiveKey="0" flush>
-                  <Accordion.Item eventKey="1">
-                    <Accordion.Header>SKILLS </Accordion.Header>
-                    <Accordion.Body>
+                  <Accordion.Item className="help" eventKey="1">
+
+                    <Accordion.Header className='accHead '>SKILLS </Accordion.Header>
+                    <Accordion.Body className="accBod ">
                       <p><b>•Languages and Tools:</b> Python/Django, C#, JavaScript/Vue.js, C++, HTML, CSS, Linux, SQL, Dart(Flutter), Object-Oriented Programming, Visual Studio, VS Code, AWS, Virtual Box, GitHub, Balsamiq, LucidChart, Google Domains</p>
                       <p><b>•Personal:</b> Adaptability, Problem-Solving, Communication, Teamwork, Accountability, Time Management, Technical Writing</p>
                     </Accordion.Body>
                   </Accordion.Item>
 
                   <Accordion.Item eventKey="2">
-                    <Accordion.Header>RELATED COURSES</Accordion.Header>
-                    <Accordion.Body>
+                    <Accordion.Header className='accHead'>RELATED COURSES</Accordion.Header>
+                    <Accordion.Body className="accBod">
                       <p><b>•</b>Web Engineering, Front-End Development, Web and Mobile Applications, Algorithms, Software Engineering, System Foundations, Database Systems, HTML, HCI</p>
                     </Accordion.Body>
                   </Accordion.Item>
                   <Accordion.Item eventKey="3">
-                    <Accordion.Header>PERSONAL PROJECTS</Accordion.Header>
-                    <Accordion.Body>
+                    <Accordion.Header className='accHead'>PERSONAL PROJECTS</Accordion.Header>
+                    <Accordion.Body className="accBod">
                       <p><b>Media Management Website,</b> Oct. 2022 – Dec. 2022 </p>
                       <p><b>•</b>Using Python/Django, HTML/CSS with Bootstrap, MariaDB, and AWS (EC2, RDS, S3), developed a content management application that allowed users to upload media. The media was organized into playlists for media players to use to update their content. Implemented security measures for accessing website by requiring the creation of an account and log in information for individual users.                                                                                                                                                 </p>
                       <p><b>Location Tracker App, </b>April 2023 – May 2023 </p>
@@ -101,8 +111,8 @@ function Resume() {
                   </Accordion.Item>
 
                   <Accordion.Item eventKey="4">
-                    <Accordion.Header>WORK EXPERIENCE</Accordion.Header>
-                    <Accordion.Body>
+                    <Accordion.Header className='accHead'>WORK EXPERIENCE</Accordion.Header>
+                    <Accordion.Body className="accBod">
                       <p><b>Game Dev/Programming Intern,</b> Jun. 2023 - Aug. 2023 </p>
                       <p>I.D.E.A.S Summer Camp, Pittsburgh, PA</p>
                       <p><b>•</b>Developed and implemented a comprehensive and engaging curriculum for teaching programming concepts to children aged 7-13. Introduced programming languages, such as Python, C# and Lua, as well as basic programming concepts such as algorithms, data structures, methods, functions, and recursion. Challenged campers to use tools and problem-solving to achieve goals by assigning specific projects aimed at developing targeted programming skills.</p>
@@ -115,8 +125,8 @@ function Resume() {
                   </Accordion.Item>
 
                   <Accordion.Item eventKey="5">
-                    <Accordion.Header>EXTRACURRICULAR ACTIVITIES</Accordion.Header>
-                    <Accordion.Body>
+                    <Accordion.Header className='accHead'>EXTRACURRICULAR ACTIVITIES</Accordion.Header>
+                    <Accordion.Body className="accBod">
                       <p><b>Member,</b> Computer Science Club, Geneva College, Jan. 2022 – Present   </p>
                       <p><b>Member,</b> Geneva College Football Team, Geneva College, Aug.  2020 – Present</p>
                       <p><b>Volunteer,</b> Assistant Football Strength Coach, South Allegheny HS,Jun. 2021 – Aug 2021</p>
@@ -131,8 +141,29 @@ function Resume() {
 
       </body >
 
-      <footer>
-        <p>Created by Zack Martin</p>
+      <footer className="footer">
+        <Button variant="warning" onClick={handleShow}>
+          Created By Zack Martin
+        </Button>
+
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title className='modalTitle'>Welcome to ZackWorld!!!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            This Website Was Created Solely By Zack Martin Using React.js and AWS
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="danger" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </footer>
 
 

@@ -4,21 +4,13 @@
 
 .App {
   text-align: center;
-  height: 950px;
+  height: 100%;
 
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    border-radius: 50%;
-    height: 75%;
-  }
 }
 
 .App-header {
@@ -58,7 +50,7 @@
 }
 
 .carousel {
-  margin-top: 50px;
+  margin-top: 80px;
   height: 600px;
   display: flex;
   justify-content: center;
@@ -73,16 +65,18 @@ footer {
   padding-top: 15px;
 }
 
-.itm {
 
-  height: 400px;
-  width: 600px;
+.carousel-image {
+  width: 900px;
+
+  height: auto;
+
   object-fit: contain;
 }
 
 .column {
   flex: 50%;
-  height: 200px;
+  height: 150px;
 }
 
 .jumbotron {
@@ -115,6 +109,25 @@ footer {
   font-size: medium;
 }
 
+.project-description {
+  max-height: 150px;
+  /* Limit the height of the description */
+  margin-bottom: 25px;
+  font-size: 50%;
+  /* Add a scroll bar if the description exceeds the height */
+}
+
+.carousel .cap {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px;
+  position: static;
+  bottom: 0;
+  font-size: 3rem;
+  width: 100%;
+}
+
 .pic {
   height: 200px;
   width: 200px;
@@ -125,13 +138,22 @@ footer {
   margin-top: 5%;
 }
 
+
+
 .project-title {
-  margin-top: 75px;
+  margin-top: 70px;
+  margin-bottom: 60px;
   color: white;
 }
 
 .rick-btn {
-  margin-top: 100px;
+  margin-top: -2.5%;
+}
+
+.srcPic {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
 
 .subtitle {
@@ -140,6 +162,6 @@ footer {
 }
 
 .title {
-  padding-top: 100px;
+  padding-top: 30px;
   color: white;
 }

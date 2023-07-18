@@ -20,6 +20,7 @@ export default function App() {
           <Route path="resume" element={<Resume />} />
           <Route path="about" element={<About />} />
           <Route path="gallery" element={<Gallery />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

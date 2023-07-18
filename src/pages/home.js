@@ -1,38 +1,48 @@
 import '../styles/home.css';
-import { Outlet, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
 
 function Home() {
 
   const projects = [
     {
       title: 'Mobile Portfolio Application',
-      description: '•Using Flutter, developed a mobile application which contained a portfolio including a resume page, an about page, a gallery, as well as a guest list.', title: 'Flutter Portfolio App',
+      description: 'Using Flutter, developed a mobile application which contained a portfolio including a resume page, an about page, a gallery, as well as a guest list.',
       image: require('../images/flutter.png'),
     },
     {
-      title: 'Chruch Management Application',
-      description: '•Using Vue.js including Pinia and Axios, and HTML/CSS with Bulma, developed a browser-based application to manage member data, including donations and event participation.  Provided detailed and summary views of each member.',
+      title: 'Church Management Application',
+      description: 'Using Vue.js including Pinia and Axios, and HTML/CSS with Bulma, developed a browser-based application to manage member data, including donations and event participation. Provided detailed and summary views of each member.',
       image: require('../images/364.png'),
     },
     {
       title: 'Media Management Application',
-      description: '•Using Python/Django, HTML/CSS with Bootstrap, MariaDB, and AWS (EC2, RDS, S3), developed a content management application that allowed users to upload media. The media was organized into playlists for media players to use to update their content. Implemented security measures for accessing website by requiring the creation of an account and log in information for individual users.',
+      description: 'Using Python/Django, HTML/CSS with Bootstrap, MariaDB, and AWS (EC2, RDS, S3), developed a content management application that allowed users to upload media. The media was organized into playlists for media players to use to update their content. Implemented security measures for accessing website by requiring the creation of an account and log in information for individual users.',
       image: require('../images/django.png'),
     },
   ];
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
   return (
     <div className="App">
       <header className="App-header">
 
 
-        <div class="jumbotron jumbotron-fluid">
-          <div class="title">
+        <div className="jumbotron jumbotron-fluid">
+          <div className="title">
+            <img className="srcPic" src={require('../images/logo1.jpg')} alt="logo" />
             <h1>Hello, World!</h1>
             <h2>Welcome to ZackWorld!</h2>
-            <a class="btn btn-primary" href="/about" role="button">About Zack</a>
+            <a className="btn btn-primary" href="/about" role="button">About Zack</a>
           </div>
         </div>
 
@@ -41,48 +51,74 @@ function Home() {
       <body className="App-body">
 
 
-        <div class="row">
-          <div class="column">
-            <div class="subtitle">
+        <div className="row">
+          <div className="column">
+            <div className="subtitle">
               <h1>Hi, I'm Zack!</h1>
               <h2>Take a look around!</h2>
             </div>
           </div>
 
-          <div class="column">
-            <div class="profile-pic">
-              <img class="pic" src={require("../images/Zack.jpg")} alt="zack" />
+          <div className="column">
+            <div className="profile-pic">
+              <img className="pic" src={require("../images/Zack.jpg")} alt="zack" />
             </div>
           </div>
         </div>
 
-        <div class="project-title">
-          <h1>My Projects</h1>
+
+        <div className="column">
+          <div className="rick-btn">
+            <a className="btn btn-primary btn-lg" href="https://youtu.be/dQw4w9WgXcQ" role="button">A Gift For You!</a>
+          </div>
         </div>
 
-        <div classname="carousel">
+
+        <div className="project-title">
+          <h1><b>My Projects</b></h1>
+        </div>
+
+        <div className="carousel">
           <Carousel>
             {projects.map((project, index) => (
               <Carousel.Item key={index}>
-                <img className="itm" src={project.image} alt={project.title} />
-                <Carousel.Caption class="cap">
+                <img className="carousel-image" src={project.image} alt={project.title} />
+                <Carousel.Caption className="cap">
                   <h3>{project.title}</h3>
-                  <p>{project.description}</p>
+                  <p className="project-description">{project.description}</p>
                 </Carousel.Caption>
               </Carousel.Item>
             ))}
           </Carousel>
         </div>
 
-        <div class='rick-btn'>
-          <a class="btn btn-primary btn-lg" href="https://youtu.be/dQw4w9WgXcQ" role="button">The Promised Land</a>
-        </div>
 
       </body>
-      <footer>
-        <p>Created by Zack Martin</p>
-      </footer>
+      <footer className="footer">
 
+        <Button variant="primary" onClick={handleShow}>
+          Created By Zack Martin
+        </Button>
+
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title className="modalTitle">Welcome to ZackWorld!!!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            This Website Was Created Solely By Zack Martin Using React.js and AWS
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="danger" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </footer>
     </div>
 
   );
