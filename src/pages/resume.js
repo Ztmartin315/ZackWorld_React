@@ -17,14 +17,14 @@ function Resume() {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="Resume">
+      <header className="Resume-header">
       </header>
 
       <body class="body1">
-        <div class="container">
+        <div class="bodyContainer">
           <div class="row">
-            <div class="col" id="column1">
+            <div class="col-3" id="column1">
               <img class="self" src={require("../images/Zack.jpg")} />
               <h1>Zachary Martin</h1>
               <p>Ztmartin315@gmail.com  |   (412) 818-2100  |  McKeesport, PA</p>
@@ -37,10 +37,10 @@ function Resume() {
               <p>Dean’s List: Fall 2021 - Spring 2023 (4 Semesters)</p>
 
             </div>
-            <div class="col" id="column2">
+            <div class="col-9" id="column2">
 
               <div class="cards">
-                <div className="container">
+                <div className="row-container">
                   <div className="row">
                     <div className="col-md-4">
                       <div className="card">

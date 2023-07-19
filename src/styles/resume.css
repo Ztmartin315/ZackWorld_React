@@ -1,10 +1,9 @@
 html,
 .body1 {
-    height: calc(100% + var(--footer-height));
-
     color: black;
-    margin: 0;
     padding: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .accBod {
@@ -19,31 +18,45 @@ html,
 
 }
 
-.App {
+.Resume {
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
+
 
 .accordion-container {
     margin-top: 100px !important;
     width: 70%;
-
-
+    margin-bottom: 8%;
     margin-left: auto;
     margin-right: auto;
+    overflow-y: auto;
 }
 
+.row {
 
-
-.body1 {
-    margin: 0;
-    padding: 0;
-    margin-right: 0 !important;
-
-    background-color: rgb(249, 212, 7);
-
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap columns to next row on smaller screens */
+    justify-content: center;
 }
+
+.col-3 {
+    flex: 0 0 30%;
+    /* Adjust column width as needed for different screen sizes */
+    max-width: 30%;
+    /* Ensure the column doesn't grow beyond 30% */
+}
+
+.col-9 {
+    flex: 0 0 70%;
+    /* Adjust column width as needed for different screen sizes */
+    max-width: 70%;
+    /* Ensure the column doesn't grow beyond 70% */
+}
+
 
 .self {
     border-radius: 50%;
@@ -59,65 +72,72 @@ html,
     font-size: .825rem;
     margin-left: auto;
     margin-right: auto;
-
+    width: 100%;
+    overflow-y: auto;
 }
 
-.container {
-    margin: 0 !important;
-    padding-bottom: calc(100vh - var(--footer-height));
-
+.row-container {
+    flex: 1;
+    /* Take up remaining vertical space */
+    display: flex;
+    justify-content: center;
 }
+
 
 .accordion {
 
     padding: 0;
-
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
     font-size: 1rem;
+    overflow-y: auto;
 
 }
 
 .cards {
 
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 
     margin-right: 5%;
     margin-left: auto;
-}
-
-.col {
-    height: 950px;
 }
 
 
 
 #column1 {
     background-color: rgb(42, 42, 42);
-    margin-left: 0 !important;
-    flex: 1;
     color: white;
+
 
 }
 
 #column2 {
     background-color: #fac404;
-
-
-    margin-right: -12%;
-    flex: 2;
-
 }
 
 
 .footer {
 
-    margin-top: auto;
+
     color: #f5f5f5;
     background-color: black;
-    padding: 20px;
     text-align: center;
-    --footer-height: 65px;
-    height: var(--footer-height);
+    height: 5% !important;
 
+}
+
+@media (max-width: 768px) {
+    .col-3 {
+        flex: 0 0 100%;
+        /* On smaller screens, make the column take up the full width */
+        max-width: 100%;
+    }
+
+    .col-9 {
+        flex: 0 0 100%;
+        /* On smaller screens, make the column take up the full width */
+        max-width: 100%;
+    }
 }
